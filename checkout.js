@@ -1,23 +1,20 @@
 let products = require("./products")
 
-const checkoutItems = function(){
-    function total(){
+function checkoutItems(){
+
         let items = {}
         let total = 0
         for(let item in items) {
             let itemQuantity = items[item]
             total += products.calculate(item, itemQuantity)
-        }
-        return total;
-    }
-    function scan(item) {
-
-    }
-
-    return {
-        scan: scan,
-        total: total
+   
+        return checkoutItems;
     }
 }
 
-module.exports = checkoutItems;
+function scan(item) {
+    let currentQuantity = items[item] || 0;
+    items[item] = ++ currentQuantity;
+}
+
+module.exports = {checkoutItems, scan};
