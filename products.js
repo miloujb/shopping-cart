@@ -1,4 +1,4 @@
-export default products = {
+let products = {
     A: {
         unitPrice: 50,
         discountPrice: {
@@ -20,3 +20,4 @@ export default products = {
         unitPrice: 12
     }
 }
+
