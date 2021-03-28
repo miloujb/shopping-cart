@@ -14,7 +14,7 @@ function getTotal(item, quantity) {
 }
 
 let offers = {};
-
+//this function will add offers to the object above
 function addOfferToReceipt(item, quantity, price) {
     offers[item] = {
         quantity: quantity,
